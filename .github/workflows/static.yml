@@ -28,9 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
-        uses: actions/checkout@v4 
-        with: path: './'  
-        # <--- THIS IS THE FIX
+        uses: actions/checkout@v4
+        with: 
+          path: './' # <--- THIS IS THE FIX  <-- ERROR IS LIKELY HERE
 
       - name: Set up Node
         uses: actions/setup-node@v4
