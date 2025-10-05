@@ -21,29 +21,29 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# .github/workflows/static.yml
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
-        with: 
-          path: './' # <--- THIS IS THE FIX  <-- ERROR IS LIKELY HERE
+        # NOTE: Removed the 'with: path: ./' block here to avoid YAML syntax errors 
+        # and allow the default checkout behavior, which we compensate for below.
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Note: We are now running the steps without a specific working-directory, 
-      # forcing them to use the root where 'package.json' should be.
+      # The Action environment is placing the code in a nested path, 
+      # so we must explicitly define the inner directory as the working directory.
       - name: Install dependencies
         run: npm install
+        working-directory: Personal-Portfolio 
 
       - name: Build project
         run: npm run build
+        working-directory: Personal-Portfolio
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -51,7 +51,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This must point to the folder created by 'npm run build'
-          path: './dist' 
-
-      # ... (rest of the file)
+          # The 'dist' folder is created inside the nested folder, so we must point to it.
+          path: './Personal-Portfolio/dist' 
