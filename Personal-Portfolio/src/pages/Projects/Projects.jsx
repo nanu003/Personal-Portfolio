@@ -79,7 +79,7 @@ function Projects() {
     <div>
          <div className='max-w-6xl mx-auto px-6 py-6'>
           
-          <div className='text-center mb-14'>
+          <div className='text-center mb-16'>
             <div className='inline-block border-2 border-gray-400 rounded-2xl px-12 py-4 bg-gray-800/60 backdrop-blur-lg shadow-2xl'>
               <h1 className='text-6xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent tracking-wide'>
                 PROJECTS
@@ -117,7 +117,7 @@ function Projects() {
 
         {selectedProject && (
           <div className='fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4' onClick={closeProjectDetails}>
-            <div className='bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] border border-gray-600' onClick={(e) => e.stopPropagation()}>
+            <div className='bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-600' onClick={(e) => e.stopPropagation()}>
               <div className='flex justify-between items-start mb-6'>
                 <h2 className='text-4xl font-bold text-pink-400'>{selectedProject.title}</h2>
                 <button 
