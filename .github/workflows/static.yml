@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # Default checkout path is used here.
+        # We check out the code into the default runner root path.
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -35,16 +35,18 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        # This addresses the historical nested folder issue
+        # This needs to run from the nested folder where package.json is located.
         working-directory: Personal-Portfolio
 
+      # ➡️ CRITICAL FIX: We remove the working-directory from the build step 
+      # and instead pass the base path via the command line to ensure Vite compiles correctly.
       - name: Build project
-        run: npm run build
+        # We tell Vite the correct base path using the --base flag.
+        run: npm run build --base=/Personal-Portfolio/ 
         working-directory: Personal-Portfolio
         
       # ➡️ STEP A: UPLOAD ARTIFACT
-      # This step takes the compiled code (from the build step) and uploads it 
-      # under the specific name ('github-pages') that the final deploy action expects.
+      # This step takes the compiled code and uploads it.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
