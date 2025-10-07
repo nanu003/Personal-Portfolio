@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # We assume the last file path fixes are active, so we use default checkout.
+        # Default checkout path is used here.
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -35,17 +35,24 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        # We use working-directory here to correctly address the nested folder issue found earlier.
+        # This addresses the historical nested folder issue
         working-directory: Personal-Portfolio
 
       - name: Build project
         run: npm run build
         working-directory: Personal-Portfolio
         
-      # ➡️ NEW: This replaces the old Setup Pages and Upload Artifact steps.
-      # It automatically finds the deployment artifact (which is now built)
+      # ➡️ STEP A: UPLOAD ARTIFACT
+      # This step takes the compiled code (from the build step) and uploads it 
+      # under the specific name ('github-pages') that the final deploy action expects.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This path points to the 'dist' folder created inside the nested project folder
+          path: './Personal-Portfolio/dist'
+
+      # ➡️ STEP B: DEPLOY PAGES
+      # This step finds the uploaded 'github-pages' artifact and pushes it live.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-# ➡️ Note: The dependency on 'upload-pages-artifact' is now managed internally by 'deploy-pages'.
