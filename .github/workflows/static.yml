@@ -1,4 +1,3 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -16,40 +15,37 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Build job: Sets up environment, installs dependencies, runs build script, and creates the artifact.
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 
+      - name: Checkout
         uses: actions/checkout@v4
-        # NOTE: Removed the 'with: path: ./' block here to avoid YAML syntax errors 
-        # and allow the default checkout behavior, which we compensate for below.
+        # We assume the last file path fixes are active, so we use default checkout.
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # The Action environment is placing the code in a nested path, 
-      # so we must explicitly define the inner directory as the working directory.
       - name: Install dependencies
         run: npm install
-        working-directory: Personal-Portfolio 
+        # We use working-directory here to correctly address the nested folder issue found earlier.
+        working-directory: Personal-Portfolio
 
       - name: Build project
         run: npm run build
         working-directory: Personal-Portfolio
+        
+      # ➡️ NEW: This replaces the old Setup Pages and Upload Artifact steps.
+      # It automatically finds the deployment artifact (which is now built)
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # The 'dist' folder is created inside the nested folder, so we must point to it.
-          path: './Personal-Portfolio/dist' 
+# ➡️ Note: The dependency on 'upload-pages-artifact' is now managed internally by 'deploy-pages'.
