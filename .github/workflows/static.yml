@@ -42,7 +42,7 @@ jobs:
       # and instead pass the base path via the command line to ensure Vite compiles correctly.
       - name: Build project
         # We tell Vite the correct base path using the --base flag.
-        run: npm run build --base=/Personal-Portfolio/ 
+        run: npm run build --base=./
         working-directory: Personal-Portfolio
         
       # ➡️ STEP A: UPLOAD ARTIFACT
