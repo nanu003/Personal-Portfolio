@@ -14,14 +14,14 @@ function Info() {
                  <img className='h-10 lg:h-12' src= {import.meta.env.BASE_URL + 'git.png'} />
               </button>
               <button onClick={() => window.open('https://www.linkedin.com/in/nikhil-kalkhuria-960381253/')}>
-                 <img className='h-10 lg:h-12' src='/public/linkdin.png' />
+                 <img className='h-10 lg:h-12' src={import.meta.env.BASE_URL + 'linkdin.png'} />
               </button>
             </div>
         </div>
         
        <div className='flex-1 order-1 lg:order-2 mb-6 lg:h-50 lg:mb-30'>
          <div className='flex justify-center items-center lg:pr-10'>
-            <img className='h-64 md:h-80 lg:h-146.5 object-cover lg:mr-30' src='/public/mee.png' alt='Profile'/>
+            <img className='h-64 md:h-80 lg:h-146.5 object-cover lg:mr-30' src={import.meta.env.BASE_URL + 'mee.png'} alt='Profile'/>
         </div>
        </div>
     </div>
