@@ -31,13 +31,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # ➡️ NEW: Install project dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # ➡️ NEW: Build the Vite project (creates the 'dist' folder)
+      - name: Build Project
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # 🎯 CRITICAL FIX: Point to the 'dist' directory, NOT the project root ('.')
+          path: './dist' 
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
