@@ -11,7 +11,7 @@ function Info() {
             </div>
             <div className='flex justify-center lg:justify-start space-x-4 lg:space-x-6 lg:ml-50 mt-8 lg:mt-16'>
               <button onClick={() => window.open('https://github.com/nanu003')}>
-                 <img className='h-10 lg:h-12' src='/public/git.png' />
+                 <img className='h-10 lg:h-12' src= {import.meta.env.BASE_URL + 'git.png'} />
               </button>
               <button onClick={() => window.open('https://www.linkedin.com/in/nikhil-kalkhuria-960381253/')}>
                  <img className='h-10 lg:h-12' src='/public/linkdin.png' />
