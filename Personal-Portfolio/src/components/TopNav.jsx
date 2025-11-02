@@ -8,7 +8,11 @@ function TopNav() {
   return (
     <div className=" text-black p-8 mt-0 flex justify-between items-center">
       <h1 className="text-lg font-bold text-2xl">
-        <img src="/public/chatting.png" alt="Logo" className="h-12 inline" />
+        <img 
+  src={import.meta.env.BASE_URL + "chatting.png"} 
+  alt="Logo" 
+  className="h-12 inline" 
+/>
       </h1>
         <div className="space-x-2 flex justify-end p-0">
             <Button onClick={() => navigate("/")} isActive={location.pathname === "/"}>Home</Button>
