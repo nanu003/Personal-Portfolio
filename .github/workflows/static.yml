@@ -16,7 +16,6 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -32,12 +31,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ➡️ NEW: Install project dependencies
+      # ➡️ FIX: Install dependencies inside the correct subdirectory
       - name: Install Dependencies
+        working-directory: Personal-Portfolio # Tells action to run in the source folder
         run: npm install
 
-      # ➡️ NEW: Build the Vite project (creates the 'dist' folder)
+      # ➡️ FIX: Build the Vite project from the correct subdirectory
       - name: Build Project
+        working-directory: Personal-Portfolio # Tells action to run in the source folder
         run: npm run build
 
       - name: Setup Pages
@@ -46,8 +47,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 🎯 CRITICAL FIX: Point to the 'dist' directory, NOT the project root ('.')
-          path: './dist' 
+          # CRITICAL FIX: The built output folder ('dist') is inside the source folder
+          path: './Personal-Portfolio/dist' 
 
       - name: Deploy to GitHub Pages
         id: deployment
