@@ -30,7 +30,10 @@ function App() {
     path: "/contact",
     element: <Contact />
   }
-])
+],{
+    // 🎯 CRITICAL FIX: Set the base path for React Router
+    basename: "/Personal-Portfolio/", 
+  });
 
   return (
     <>
