@@ -31,15 +31,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ➡️ FIX: Install dependencies inside the correct subdirectory
+      # ➡️ FIX 1: Use 'cd' to navigate to the source directory before 'npm install'
       - name: Install Dependencies
-        working-directory: Personal-Portfolio # Tells action to run in the source folder
-        run: npm install
+        run: cd Personal-Portfolio && npm install
 
-      # ➡️ FIX: Build the Vite project from the correct subdirectory
+      # ➡️ FIX 2: Use 'cd' to navigate to the source directory before 'npm run build'
       - name: Build Project
-        working-directory: Personal-Portfolio # Tells action to run in the source folder
-        run: npm run build
+        run: cd Personal-Portfolio && npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -47,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # CRITICAL FIX: The built output folder ('dist') is inside the source folder
+          # ➡️ FIX 3: Point to the 'dist' folder inside the source directory
           path: './Personal-Portfolio/dist' 
 
       - name: Deploy to GitHub Pages
