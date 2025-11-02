@@ -21,7 +21,7 @@ function About() {
             <div className='flex-shrink-0'>
               <div className='rounded-full border-4 border-gray-400 p-3 bg-gradient-to-r from-pink-500 to-purple-600 shadow-2xl'>
                 <img 
-                  src='/public/pic.png' 
+                  src={import.meta.env.BASE_URL + 'pic.png'} 
                   className='rounded-full h-80 w-80 object-cover border-4 border-white shadow-lg' 
                   alt='Nikhil Kalkhuria Profile'
                 />
