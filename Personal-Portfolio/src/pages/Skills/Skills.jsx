@@ -29,14 +29,14 @@ function Skills() {
                 </div>
                 <div className='grid grid-cols-1 gap-6'>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/java.png' alt='Java' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'java.png'} alt='Java' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Java</span>
                       <p className='text-sm text-gray-400'>Object-oriented programming, Data Structures</p>
                     </div>
                   </div>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/python.png' alt='Python' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'python.png'} alt='Python' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Python</span>
                       <p className='text-sm text-gray-400'>Automation</p>
@@ -54,23 +54,23 @@ function Skills() {
                 </div>
                 <div className='grid grid-cols-1 gap-4'>
                   <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/react.png' alt='React.js' className='w-8 h-8 mr-3 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'react.png'} alt='React.js' className='w-8 h-8 mr-3 rounded-lg' />
                     <span className='text-lg font-medium text-gray-200'>React.js</span>
                   </div>
                   <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/html.png' alt='HTML5' className='w-8 h-8 mr-3 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'html.png'} alt='HTML5' className='w-8 h-8 mr-3 rounded-lg' />
                     <span className='text-lg font-medium text-gray-200'>HTML5</span>
                   </div>
                   <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/css.png' alt='CSS3' className='w-8 h-8 mr-3 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'css.png'} alt='CSS3' className='w-8 h-8 mr-3 rounded-lg' />
                     <span className='text-lg font-medium text-gray-200'>CSS3</span>
                   </div>
                   <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/tail.png' alt='Tailwind CSS' className='w-8 h-8 mr-3 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'tail.png'} alt='Tailwind CSS' className='w-8 h-8 mr-3 rounded-lg' />
                     <span className='text-lg font-medium text-gray-200'>Tailwind CSS</span>
                   </div>
                   <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/js.png' alt='JavaScript' className='w-8 h-8 mr-3 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'js.png'} alt='JavaScript' className='w-8 h-8 mr-3 rounded-lg' />
                     <span className='text-lg font-medium text-gray-200'>JavaScript</span>
                   </div>
                 </div>
@@ -85,14 +85,14 @@ function Skills() {
                 </div>
                 <div className='grid grid-cols-1 gap-6'>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/git.png' alt='Git' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'git.png'} alt='Git' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Git & GitHub</span>
                       <p className='text-sm text-gray-400'>Version control, collaboration</p>
                     </div>
                   </div>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src='/public/vscode.png' alt='VS Code' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src={import.meta.env.BASE_URL + 'vscode.png'} alt='VS Code' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>VS Code</span>
                       <p className='text-sm text-gray-400'>Integrated development environment</p>
