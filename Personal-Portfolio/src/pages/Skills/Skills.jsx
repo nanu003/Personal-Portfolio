@@ -29,49 +29,18 @@ function Skills() {
                 </div>
                 <div className='grid grid-cols-1 gap-6'>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'java.png'} alt='Java' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src='/public/java.png' alt='Java' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Java</span>
                       <p className='text-sm text-gray-400'>Object-oriented programming, Data Structures</p>
                     </div>
                   </div>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'python.png'} alt='Python' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src='/public/python.png' alt='Python' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Python</span>
                       <p className='text-sm text-gray-400'>Automation</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='group'>
-              <div className='bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-3xl p-10 border border-gray-600/50 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:border-purple-400/50 hover:transform hover:scale-[1.02]'>
-                <div className='flex items-center mb-8'>
-                  <div className='w-3 h-3 bg-purple-400 rounded-full mr-4'></div>
-                  <h2 className='text-3xl font-bold text-purple-400 tracking-wide'>Web Development</h2>
-                </div>
-                <div className='grid grid-cols-1 gap-4'>
-                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'react.png'} alt='React.js' className='w-8 h-8 mr-3 rounded-lg' />
-                    <span className='text-lg font-medium text-gray-200'>React.js</span>
-                  </div>
-                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'html.png'} alt='HTML5' className='w-8 h-8 mr-3 rounded-lg' />
-                    <span className='text-lg font-medium text-gray-200'>HTML5</span>
-                  </div>
-                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'css.png'} alt='CSS3' className='w-8 h-8 mr-3 rounded-lg' />
-                    <span className='text-lg font-medium text-gray-200'>CSS3</span>
-                  </div>
-                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'tail.png'} alt='Tailwind CSS' className='w-8 h-8 mr-3 rounded-lg' />
-                    <span className='text-lg font-medium text-gray-200'>Tailwind CSS</span>
-                  </div>
-                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'js.png'} alt='JavaScript' className='w-8 h-8 mr-3 rounded-lg' />
-                    <span className='text-lg font-medium text-gray-200'>JavaScript</span>
                   </div>
                 </div>
               </div>
@@ -85,14 +54,14 @@ function Skills() {
                 </div>
                 <div className='grid grid-cols-1 gap-6'>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'git.png'} alt='Git' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src='/public/git.png' alt='Git' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>Git & GitHub</span>
                       <p className='text-sm text-gray-400'>Version control, collaboration</p>
                     </div>
                   </div>
                   <div className='flex items-center p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
-                    <img src={import.meta.env.BASE_URL + 'vscode.png'} alt='VS Code' className='w-10 h-10 mr-4 rounded-lg' />
+                    <img src='/public/vscode.png' alt='VS Code' className='w-10 h-10 mr-4 rounded-lg' />
                     <div>
                       <span className='text-xl font-semibold text-gray-200'>VS Code</span>
                       <p className='text-sm text-gray-400'>Integrated development environment</p>
@@ -121,15 +90,35 @@ function Skills() {
               </div>
             </div>
 
-          </div>
 
-          <div className='mt-16 text-center'>
-            <div className='bg-gradient-to-r from-gray-800/60 to-gray-700/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-600/30 max-w-4xl mx-auto'>
-              <h3 className='text-2xl font-bold text-gray-200 mb-6'>Additional Technologies</h3>
-              <div className='flex flex-wrap justify-center gap-4'>
-                <span className='px-4 py-2 bg-gray-700/50 rounded-full text-gray-300 text-sm font-medium'>MongoDB</span>
-                <span className='px-4 py-2 bg-gray-700/50 rounded-full text-gray-300 text-sm font-medium'>REST APIs</span>
-                <span className='px-4 py-2 bg-gray-700/50 rounded-full text-gray-300 text-sm font-medium'>Responsive Design</span>
+            <div className='group'>
+              <div className='bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-3xl p-10 border border-gray-600/50 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:border-purple-400/50 hover:transform hover:scale-[1.02]'>
+                <div className='flex items-center mb-8'>
+                  <div className='w-3 h-3 bg-purple-400 rounded-full mr-4'></div>
+                  <h2 className='text-3xl font-bold text-purple-400 tracking-wide'>Web Development</h2>
+                </div>
+                <div className='grid grid-cols-1 gap-4'>
+                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
+                    <img src='/public/react.png' alt='React.js' className='w-8 h-8 mr-3 rounded-lg' />
+                    <span className='text-lg font-medium text-gray-200'>React.js</span>
+                  </div>
+                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
+                    <img src='/public/html.png' alt='HTML5' className='w-8 h-8 mr-3 rounded-lg' />
+                    <span className='text-lg font-medium text-gray-200'>HTML5</span>
+                  </div>
+                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
+                    <img src='/public/css.png' alt='CSS3' className='w-8 h-8 mr-3 rounded-lg' />
+                    <span className='text-lg font-medium text-gray-200'>CSS3</span>
+                  </div>
+                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
+                    <img src='/public/tail.png' alt='Tailwind CSS' className='w-8 h-8 mr-3 rounded-lg' />
+                    <span className='text-lg font-medium text-gray-200'>Tailwind CSS</span>
+                  </div>
+                  <div className='flex items-center p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300'>
+                    <img src='/public/js.png' alt='JavaScript' className='w-8 h-8 mr-3 rounded-lg' />
+                    <span className='text-lg font-medium text-gray-200'>JavaScript</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
