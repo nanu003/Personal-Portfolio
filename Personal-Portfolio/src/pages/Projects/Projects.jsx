@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import PortfolioLayout from '../../components/PortfolioLayout'
 
-const BASE_URL = import.meta.env.BASE_URL;
-
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null)
 
@@ -11,8 +9,8 @@ function Projects() {
       id: 1,
       title: 'AI Notes Summarizer',
       description: 'Developed a full-stack web app that summarizes notes from PDFs or handwritten inputs using AI',
-      image: BASE_URL + 'pdf.png',
-      technologies: ["React.js", "Tailwind CSS", "REST API", "Python (Flask)", "LLaMA", "OCR (Tesseract)"],
+      image: '/public/pdf.png',
+      technologies: ["React.js", "Tailwind CSS", "Python (Flask)", "LLaMA", "OCR (Tesseract)"],
       details: {
         overview: 'A comprehensive note-taking and summarization application that leverages artificial intelligence to process and summarize content from various sources including PDFs and handwritten notes.',
         features: [
@@ -22,7 +20,7 @@ function Projects() {
           'User-friendly web interface',
           'Export functionality for summaries'
         ],
-        technologies: ["React.js", "Tailwind CSS", "REST API", "Python (Flask)", "LLaMA", "OCR (Tesseract)"],
+        technologies: ["React.js", "Tailwind CSS", "Python (Flask)", "LLaMA", "OCR (Tesseract)"],
         challenges: 'Implementing accurate OCR for handwritten text and optimizing AI summarization for different content types.',
       }
     },
@@ -30,7 +28,7 @@ function Projects() {
       id: 2,
       title: 'Currency Converter',
       description: 'A simple and intuitive currency converter application',
-      image: BASE_URL + 'money.png',
+      image: '/public/money.png',
       technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
       details: {
         overview: 'A modern, responsive portfolio website showcasing my skills, projects, and professional journey with elegant animations and clean design.',
@@ -49,8 +47,8 @@ function Projects() {
       id: 3,
       title: 'Crypto Dashboard',
       description: 'A comprehensive cryptocurrency dashboard application with real-time data and analytics',
-      image: BASE_URL + 'crypto.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'REST API'],
+      image: '/public/crypto.png',
+      technologies: ['React', 'Node.js', 'MongoDB'],
       details: {
         overview: 'A full-featured cryptocurrency dashboard designed for users to track and analyze their crypto investments efficiently.',
         features: [
@@ -60,7 +58,7 @@ function Projects() {
           'Market analysis tools',
           'Real-time notifications'
         ],
-        technologies: ['React', 'Node.js', 'MongoDB', 'REST API'],
+        technologies: ['React', 'Node.js', 'MongoDB'],
         challenges: 'Implementing real-time collaboration features and ensuring data consistency across multiple users.',
       }
     }
