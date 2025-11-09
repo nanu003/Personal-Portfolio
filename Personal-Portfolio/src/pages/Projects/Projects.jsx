@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PortfolioLayout from '../../components/PortfolioLayout'
+const BASE_URL = import.meta.env.BASE_URL;
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -9,7 +10,7 @@ function Projects() {
       id: 1,
       title: 'AI Notes Summarizer',
       description: 'Developed a full-stack web app that summarizes notes from PDFs or handwritten inputs using AI',
-      image: '/public/pdf.png',
+      image: BASE_URL + 'pdf.png',
       technologies: ["React.js", "Tailwind CSS", "Python (Flask)", "LLaMA", "OCR (Tesseract)"],
       details: {
         overview: 'A comprehensive note-taking and summarization application that leverages artificial intelligence to process and summarize content from various sources including PDFs and handwritten notes.',
@@ -28,7 +29,7 @@ function Projects() {
       id: 2,
       title: 'Currency Converter',
       description: 'A simple and intuitive currency converter application',
-      image: '/public/money.png',
+      image: BASE_URL + 'money.png',
       technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
       details: {
         overview: 'A modern, responsive portfolio website showcasing my skills, projects, and professional journey with elegant animations and clean design.',
@@ -47,7 +48,7 @@ function Projects() {
       id: 3,
       title: 'Crypto Dashboard',
       description: 'A comprehensive cryptocurrency dashboard application with real-time data and analytics',
-      image: '/public/crypto.png',
+      image: BASE_URL + 'crypto.png',
       technologies: ['React', 'Node.js', 'MongoDB'],
       details: {
         overview: 'A full-featured cryptocurrency dashboard designed for users to track and analyze their crypto investments efficiently.',
